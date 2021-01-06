@@ -4,13 +4,12 @@ import PyPDF2
 pdfFileObj = open('example.pdf', 'rb') 
 
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj) 
- 
-print(pdfReader.numPages) 
 
-pageObj = pdfReader.getPage(0) 
- 
-strings = pageObj.extractText()
-print(pageObj.extractText()) 
+strings = ""
+for i in range(pdfReader.numPages):
+	strings += pdfReader.getPage(i).extractText()
+
+print(strings) 
  
 pdfFileObj.close() 
 

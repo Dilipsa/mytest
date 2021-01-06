@@ -1,4 +1,4 @@
-Python Program To translate English pdf strign to Japanese language
+Python Program To translate English pdf string to Japanese language
 ===================================================================
 clone the repository
 ====================
